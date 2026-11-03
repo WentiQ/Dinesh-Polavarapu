@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Pitch Deck Exact Palette */
+    --brand-gold: #F7B500;
+    --brand-gold-hover: #E5A600;
+    --brand-blue: #1868F2;
+    --brand-blue-hover: #1054CE;
+    --deck-charcoal: #121310;
+    --deck-charcoal-card: #1A1B17;
+    --deck-charcoal-border: #2C2D28;
+    --deck-cream: #F6F4ED;
+    --deck-cream-card: #FFFFFF;
+    --deck-cream-border: #E5E2D6;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Deck Accent Color Utilities */
+.bg-deck-gold {
+  background-color: #F7B500;
+}
+.text-deck-gold {
+  color: #D99B00;
+}
+.dark .text-deck-gold {
+  color: #F7B500;
+}
+.border-deck-gold {
+  border-color: #F7B500;
+}
+
+.bg-deck-blue {
+  background-color: #1868F2;
+}
+.text-deck-blue {
+  color: #1868F2;
+}
+.border-deck-blue {
+  border-color: #1868F2;
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.45);
+}
