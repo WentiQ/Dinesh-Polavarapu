@@ -467,45 +467,50 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* 6. Document Archive Spotlight (Featuring the Qraezev Global Pitch Deck) */}
-      <section className="p-8 sm:p-10 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xs">
-        <div className="space-y-3 max-w-2xl">
-          <div className="flex items-center gap-2 text-xs font-mono-code text-[#D99B00] dark:text-[#F7B500] font-semibold">
-            <FileText className="w-3.5 h-3.5" />
-            <span>FEATURED PITCH DECK · PRE-SEED DOCUMENTATION</span>
-          </div>
-          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-950 dark:text-white">
-            {DOCUMENTS_DATA[0].title}
-          </h3>
-          <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-            {DOCUMENTS_DATA[0].summary}
-          </p>
-          <div className="flex flex-wrap items-center gap-3 text-xs font-mono-code text-neutral-500">
-            <span className="text-[#F7B500] font-semibold">{DOCUMENTS_DATA[0].pages} Slides</span>
-            <span>·</span>
-            <span>{DOCUMENTS_DATA[0].category}</span>
-            <span>·</span>
-            <span className="text-[#1868F2] dark:text-[#5B95F7]">Updated {DOCUMENTS_DATA[0].date}</span>
-          </div>
-        </div>
+      {(() => {
+        const featuredPitchDeck = DOCUMENTS_DATA.find((doc) => doc.id === 'doc-qraezev-pitch-deck') || DOCUMENTS_DATA[0];
+        return (
+          <section className="p-8 sm:p-10 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xs">
+            <div className="space-y-3 max-w-2xl">
+              <div className="flex items-center gap-2 text-xs font-mono-code text-[#D99B00] dark:text-[#F7B500] font-semibold">
+                <FileText className="w-3.5 h-3.5" />
+                <span>FEATURED PITCH DECK · PRE-SEED DOCUMENTATION</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-950 dark:text-white">
+                {featuredPitchDeck.title}
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                {featuredPitchDeck.summary}
+              </p>
+              <div className="flex flex-wrap items-center gap-3 text-xs font-mono-code text-neutral-500">
+                <span className="text-[#F7B500] font-semibold">{featuredPitchDeck.pages} Slides</span>
+                <span>·</span>
+                <span>{featuredPitchDeck.category}</span>
+                <span>·</span>
+                <span className="text-[#1868F2] dark:text-[#5B95F7]">Updated {featuredPitchDeck.date}</span>
+              </div>
+            </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
-          <button
-            onClick={() => onSelectDocument(DOCUMENTS_DATA[0])}
-            className="w-full sm:w-auto px-5 py-2.5 text-xs font-bold text-neutral-950 bg-[#F7B500] hover:bg-[#E5A600] rounded-xl transition-colors cursor-pointer shadow-xs active:scale-[0.98]"
-          >
-            Open Pitch Deck Reader
-          </button>
-          <button
-            onClick={() => {
-              setActiveTab('documents');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="w-full sm:w-auto px-5 py-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-200 border border-[#E5E2D6] dark:border-[#2C2D28] rounded-xl hover:border-[#1868F2] hover:text-[#1868F2] transition-colors cursor-pointer"
-          >
-            Archive Library ({DOCUMENTS_DATA.length})
-          </button>
-        </div>
-      </section>
+            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
+              <button
+                onClick={() => onSelectDocument(featuredPitchDeck)}
+                className="w-full sm:w-auto px-5 py-2.5 text-xs font-bold text-neutral-950 bg-[#F7B500] hover:bg-[#E5A600] rounded-xl transition-colors cursor-pointer shadow-xs active:scale-[0.98]"
+              >
+                Open Pitch Deck Reader
+              </button>
+              <button
+                onClick={() => {
+                  setActiveTab('documents');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="w-full sm:w-auto px-5 py-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-200 border border-[#E5E2D6] dark:border-[#2C2D28] rounded-xl hover:border-[#1868F2] hover:text-[#1868F2] transition-colors cursor-pointer"
+              >
+                Archive Library ({DOCUMENTS_DATA.length})
+              </button>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* 7. Contact Banner */}
       <section className="text-center py-12 px-6 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] space-y-4">
