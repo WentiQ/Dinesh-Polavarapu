@@ -51,7 +51,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenLightbox, onOpenCont
                 My academic training is rooted in Mechanical Engineering at the Indian Institute of Technology Tirupati, joining in 2024. Studying classical continuum mechanics, kinematics, and thermodynamics enforces a rigorous habit of thought: physical materials cannot be persuaded by hype, and mathematical boundary conditions do not tolerate shortcuts.
               </p>
               <p>
-                Alongside my studies, I work on robotics, on-device intelligence, and venture building. I won the <strong className="font-semibold text-neutral-900 dark:text-white">Nation Builder Competition</strong>, a campus-run competition at IIT Tirupati, with Guardian, an on-body health-monitoring prototype.
+                Alongside my studies, I work on robotics, on-device intelligence, and venture building. I won 1st place in the <strong className="font-semibold text-neutral-900 dark:text-white">Nation Builder Competition</strong> at IIT Tirupati with The Universal Health Guardian Ecosystem — a competition-winning startup solution and systems architecture designed to bring offline-first predictive healthcare and automated emergency response to underserved communities.
               </p>
               <p>
                 Through Qraezev and open-source systems like Memossist and Tascyn, I explore how software can operate with the structural integrity of mechanical mechanisms — where state is conserved, transitions are deterministic, and physical machines learn from experience on the job.
