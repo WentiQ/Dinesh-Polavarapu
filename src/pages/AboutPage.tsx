@@ -72,27 +72,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenLightbox, onOpenCont
           </div>
         </div>
 
-        <div className="lg:col-span-5 flex flex-col gap-4">
+        <div className="lg:col-span-5 flex flex-col justify-center">
           <div 
             onClick={() => onOpenLightbox(PERSONAL_INFO.portraitImage, 'Dinesh Polavarapu')}
-            className="aspect-4/3 rounded-2xl overflow-hidden border border-[#E5E2D6] dark:border-[#2C2D28] bg-neutral-900 cursor-zoom-in"
+            className="w-full aspect-3/4 sm:aspect-4/5 lg:aspect-auto lg:h-full rounded-2xl overflow-hidden border border-[#E5E2D6] dark:border-[#2C2D28] bg-neutral-900 cursor-zoom-in group shadow-md"
           >
             <img
               src={PERSONAL_INFO.portraitImage}
               alt="Dinesh Polavarapu"
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div 
-            onClick={() => onOpenLightbox('/src/assets/images/engineering_mechanics_lab_1793726734864.jpg', 'Computational Engineering & Dynamic Analysis')}
-            className="aspect-16/9 rounded-2xl overflow-hidden border border-[#E5E2D6] dark:border-[#2C2D28] bg-neutral-900 cursor-zoom-in"
-          >
-            <img
-              src="/src/assets/images/engineering_mechanics_lab_1793726734864.jpg"
-              alt="Computational Engineering Laboratory"
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-300"
             />
           </div>
         </div>

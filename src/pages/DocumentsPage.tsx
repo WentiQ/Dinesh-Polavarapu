@@ -74,12 +74,6 @@ export const DocumentsPage: React.FC<DocumentsPageProps> = ({ onSelectDocument, 
       type: 'Computational Mechanics',
       date: '2025',
     },
-    {
-      src: PERSONAL_INFO.portraitImage,
-      title: 'Dinesh Polavarapu — Founder Studio Portrait',
-      type: 'Founder Identity',
-      date: '2026',
-    },
   ];
 
   return (
