@@ -29,7 +29,7 @@ export const DocumentModal: React.FC<DocumentModalProps> = ({ document, onClose 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/70 backdrop-blur-xs animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-4xl max-h-[90vh] flex flex-col bg-white dark:bg-[#0d0f15] border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl max-h-[90vh] flex flex-col bg-white dark:bg-[#0d0f15] border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Document Header Bar */}

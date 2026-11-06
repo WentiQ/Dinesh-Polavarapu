@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#F6F4ED]/85 dark:bg-[#121310]/85 border-b border-[#E5E2D6] dark:border-[#2C2D28] transition-colors duration-200">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-8 px-6 lg:px-10 h-16">
+      <div className="w-full mx-auto flex items-center justify-between gap-8 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32 4xl:px-40 h-16 sm:h-18">
         {/* Zone 1: Pure typographic text wordmark without logo */}
         <button
           onClick={() => handleNavClick('overview')}

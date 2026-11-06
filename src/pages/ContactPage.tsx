@@ -71,15 +71,15 @@ export const ContactPage: React.FC = () => {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 dark:text-neutral-50">
           Initiate Direct Conversation
         </h1>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-lg 2xl:text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl leading-relaxed">
           I welcome meaningful conversations with technology founders, engineering leaders, researchers, investors, and potential collaborators interested in cognitive software, on-device intelligence, and systems engineering.
         </p>
       </section>
 
       {/* 2. Main Grid: Coordinates vs Message Composer */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="grid grid-cols-1 lg:grid-cols-12 3xl:grid-cols-12 gap-12 2xl:gap-16">
         {/* Left Column: Direct Coordinates (5 cols) */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-5 3xl:col-span-4 space-y-6">
           {/* Email Card */}
           <div className="p-6 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] space-y-3 shadow-xs">
             <div className="text-xs font-mono-code text-neutral-500 dark:text-neutral-400 flex items-center justify-between">
@@ -160,7 +160,7 @@ export const ContactPage: React.FC = () => {
         </div>
 
         {/* Right Column: Interactive Message Composer (7 cols) */}
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 3xl:col-span-8">
           <div className="p-6 sm:p-8 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] shadow-xs">
             <h2 className="text-xl font-bold tracking-tight text-neutral-950 dark:text-white mb-1">
               Send a Transmission

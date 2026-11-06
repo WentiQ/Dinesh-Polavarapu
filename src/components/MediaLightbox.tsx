@@ -24,7 +24,7 @@ export const MediaLightbox: React.FC<MediaLightboxProps> = ({ imageSrc, caption,
       onClick={onClose}
     >
       <div 
-        className="relative max-w-5xl max-h-[92vh] flex flex-col items-center"
+        className="relative max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl max-h-[92vh] flex flex-col items-center"
         onClick={(e) => e.stopPropagation()}
       >
         <button

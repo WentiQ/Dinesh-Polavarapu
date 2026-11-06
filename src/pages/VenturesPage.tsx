@@ -46,7 +46,7 @@ export const VenturesPage: React.FC<VenturesPageProps> = ({
               "{VENTURE_DATA.tagline}"
             </p>
 
-            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg 2xl:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl">
               An experience layer is software that lets any robot or machine keep, reuse, and improve what it learns on the job, so integration costs fall. Sits directly between sensors and motor controllers.
             </p>
 
@@ -91,12 +91,12 @@ export const VenturesPage: React.FC<VenturesPageProps> = ({
           {/* Official Qraezev Logo */}
           <div className="lg:col-span-4 flex justify-center">
             <img
-              src="/assets/qraezev-logo-light.png"
+              src="/assets/logo_inverted.svg"
               alt="Qraezev logo"
               className="block dark:hidden w-48 h-48 object-contain"
             />
             <img
-              src="/assets/qraezev-logo-dark.png"
+              src="/assets/logo.svg"
               alt="Qraezev logo"
               className="hidden dark:block w-48 h-48 object-contain"
             />
@@ -113,7 +113,7 @@ export const VenturesPage: React.FC<VenturesPageProps> = ({
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950 dark:text-[#F6F4ED]">
             Robots start from zero. Every time.
           </h2>
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 mt-2 max-w-3xl leading-relaxed">
+          <p className="text-sm sm:text-base 2xl:text-lg text-neutral-600 dark:text-neutral-300 mt-2 max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl leading-relaxed">
             Every repeated miss costs engineer hours, line downtime, and rework. Perception is solved—depth cameras like Intel RealSense cost ~$320, so every robot can have eyes. Over 600,000 new robots are installed every year, yet each one starts blank and learns nothing from its own failures.
           </p>
         </div>
@@ -243,7 +243,7 @@ export const VenturesPage: React.FC<VenturesPageProps> = ({
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950 dark:text-[#F6F4ED]">
             Memory is not the moat. The lifecycle is.
           </h2>
-          <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-2 max-w-3xl leading-relaxed">
+          <p className="text-sm 2xl:text-base text-neutral-600 dark:text-neutral-300 mt-2 max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl leading-relaxed">
             Foundation models provide general skills trained before deployment. Robot-maker stacks are tied to one vendor or reprogrammed manually. Passive memory layers only store and recall. Qraezev adds the complete lifecycle: score, merge, and forget.
           </p>
         </div>

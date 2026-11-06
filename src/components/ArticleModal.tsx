@@ -38,7 +38,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/75 backdrop-blur-xs animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-3xl max-h-[92vh] flex flex-col bg-white dark:bg-[#0c0d12] border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl max-h-[92vh] flex flex-col bg-white dark:bg-[#0c0d12] border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Reading Progress Indicator */}

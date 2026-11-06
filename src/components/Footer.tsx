@@ -13,9 +13,9 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenContact }) =
   };
 
   return (
-    <footer className="w-full border-t border-[#352D25] dark:border-[#2C2D28] bg-[#15120E] dark:bg-[#0E0F0C] py-14 px-6 lg:px-10 transition-colors duration-200">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#352D25] dark:border-[#2C2D28]">
+    <footer className="w-full border-t border-[#352D25] dark:border-[#2C2D28] bg-[#15120E] dark:bg-[#0E0F0C] py-16 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32 4xl:px-40 transition-colors duration-200">
+      <div className="w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 3xl:grid-cols-5 gap-10 pb-12 border-b border-[#352D25] dark:border-[#2C2D28]">
           {/* Brand and Coordinates */}
           <div className="md:col-span-2 space-y-4">
             <h3 className="text-base font-semibold tracking-tight text-[#F6F4ED] dark:text-[#F6F4ED]">

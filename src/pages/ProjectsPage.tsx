@@ -32,7 +32,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onSelectProject }) =
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 dark:text-neutral-50">
           Projects & Engineering Work
         </h1>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl leading-relaxed">
+        <p className="text-base sm:text-lg 2xl:text-xl text-neutral-600 dark:text-neutral-300 max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl leading-relaxed">
           A curated catalog of software engines, cognitive architectures, financial state machines, and computational engineering experiments. Each project represents an inquiry into solving structural problems from first principles.
         </p>
       </section>
@@ -69,8 +69,8 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onSelectProject }) =
         </div>
       </section>
 
-      {/* 3. Projects Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* 3. Projects Grid - Responsive adaptation from mobile to ultra-wide 4K */}
+      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-8">
         {filteredProjects.map((project) => (
           <div
             key={project.id}

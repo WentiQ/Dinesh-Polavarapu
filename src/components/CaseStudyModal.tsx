@@ -21,7 +21,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/80 backdrop-blur-xs animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-4xl max-h-[92vh] flex flex-col bg-white dark:bg-[#1A1B17] border border-[#E5E2D6] dark:border-[#2C2D28] rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl max-h-[92vh] flex flex-col bg-white dark:bg-[#1A1B17] border border-[#E5E2D6] dark:border-[#2C2D28] rounded-2xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header bar */}

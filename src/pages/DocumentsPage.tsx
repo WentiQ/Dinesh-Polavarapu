@@ -86,7 +86,7 @@ export const DocumentsPage: React.FC<DocumentsPageProps> = ({ onSelectDocument, 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-950 dark:text-neutral-50">
           Media & Documentation Library
         </h1>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl leading-relaxed">
+        <p className="text-base sm:text-lg 2xl:text-xl text-neutral-600 dark:text-neutral-300 max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl leading-relaxed">
           A dedicated repository of technical whitepapers, system blueprints, engineering reports, and architectural schematics. Explore full documents in the built-in reader or review system media.
         </p>
       </section>
@@ -139,7 +139,7 @@ export const DocumentsPage: React.FC<DocumentsPageProps> = ({ onSelectDocument, 
 
       {/* 3. Document Cards View */}
       {activeTab === 'documents' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-6">
           {filteredDocs.map((doc) => (
             <div
               key={doc.id}
@@ -195,7 +195,7 @@ export const DocumentsPage: React.FC<DocumentsPageProps> = ({ onSelectDocument, 
 
       {/* 4. Gallery & Schematics View */}
       {activeTab === 'gallery' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-8">
           {visualAssets.map((asset, idx) => (
             <div
               key={idx}

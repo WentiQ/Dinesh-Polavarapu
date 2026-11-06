@@ -34,7 +34,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenLightbox, onOpenCont
           An engineer and founder building at the convergence of physical discipline and cognitive computation.
         </h1>
 
-        <p className="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-3xl">
+        <p className="text-lg 2xl:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl">
           I am an independent systems builder, founder of <strong className="font-semibold text-neutral-900 dark:text-white">Qraezev</strong>, and a mechanical engineering undergraduate at <strong className="font-semibold text-neutral-900 dark:text-white">IIT Tirupati</strong>. My work investigates persistent cognitive memory, autonomous agent state machines, and computational engineering systems designed from first principles.
         </p>
       </section>
@@ -142,7 +142,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenLightbox, onOpenCont
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {TECHNICAL_COMPETENCIES.map((comp, idx) => (
             <div
               key={comp.domain}
@@ -179,7 +179,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenLightbox, onOpenCont
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 gap-6">
           {TECHNICAL_EXPERIENCES.map((exp) => (
             <div
               key={exp.company}
@@ -243,7 +243,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenLightbox, onOpenCont
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
           {HONORS_CERTIFICATIONS.map((honor) => (
             <div
               key={honor.title}

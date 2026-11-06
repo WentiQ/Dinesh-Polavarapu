@@ -26,9 +26,9 @@ export const HomePage: React.FC<HomePageProps> = ({
     <div className="space-y-24 sm:space-y-32 pb-24">
       {/* 1. Hero Section - Refined Editorial Split */}
       <section className="pt-8 sm:pt-14 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 3xl:grid-cols-12 gap-12 lg:gap-16 2xl:gap-24 items-center">
           {/* Typographic Column (7 cols) */}
-          <div className="lg:col-span-7 space-y-5">
+          <div className="lg:col-span-7 3xl:col-span-7 space-y-6">
             {/* Quiet Unboxed Metadata */}
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono-code text-neutral-500 dark:text-neutral-400">
               <span className="font-semibold text-neutral-900 dark:text-[#F6F4ED]">Dinesh Polavarapu</span>
@@ -39,12 +39,12 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* Main Headline - punchy, precise */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] font-bold text-neutral-950 dark:text-[#F6F4ED] tracking-tight leading-[1.14] text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] 2xl:text-6xl 3xl:text-7xl font-bold text-neutral-950 dark:text-[#F6F4ED] tracking-tight leading-[1.12] text-balance">
               Building software systems, physical AI architectures, and robotics.
             </h1>
 
             {/* Positioning Statement & Lead Copy - concise, clear */}
-            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl">
+            <p className="text-sm sm:text-base 2xl:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl 2xl:max-w-2xl 3xl:max-w-3xl">
               I’m the founder of <strong className="font-semibold text-neutral-900 dark:text-white">Qraezev</strong> and a mechanical engineering student at <strong className="font-semibold text-neutral-900 dark:text-white">IIT Tirupati</strong>. I build AI and engineering systems.
             </p>
 
@@ -83,8 +83,8 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
 
           {/* Visual Column (5 cols) - Portrait with subtle editorial framing */}
-          <div className="lg:col-span-5">
-            <div className="relative group mx-auto max-w-md lg:max-w-none">
+          <div className="lg:col-span-5 3xl:col-span-5">
+            <div className="relative group mx-auto max-w-md lg:max-w-none 2xl:max-w-lg 3xl:max-w-xl">
               {/* Subtle deck ambient light: Gold on top-right, Cobalt Blue on bottom-left */}
               <div className="absolute -top-4 -right-4 w-48 h-48 bg-[#F7B500]/15 blur-2xl rounded-full pointer-events-none" />
               <div className="absolute -bottom-4 -left-4 w-48 h-48 bg-[#1868F2]/15 blur-2xl rounded-full pointer-events-none" />
@@ -270,8 +270,8 @@ export const HomePage: React.FC<HomePageProps> = ({
           </button>
         </div>
 
-        {/* Varied Project Cards - Intentional Editorial Treatment */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Varied Project Cards - Intentional Editorial Treatment with responsive scaling */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-8">
           {featuredProjects.map((project, idx) => {
             const isWide = idx === 0; // Memossist receives premier spotlight
             return (
@@ -279,7 +279,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 key={project.id}
                 onClick={() => onSelectProject(project)}
                 className={`group relative rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#1868F2] dark:hover:border-[#F7B500] transition-all duration-200 cursor-pointer shadow-xs ${
-                  isWide ? 'lg:col-span-2' : ''
+                  isWide ? 'md:col-span-2 xl:col-span-3 3xl:col-span-4' : ''
                 }`}
               >
                 <div>
@@ -338,15 +338,15 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* 4. Engineering Approach & Foundations (IIT Tirupati Integration) */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-5 space-y-4">
+      <section className="grid grid-cols-1 lg:grid-cols-12 3xl:grid-cols-12 gap-10 items-center">
+        <div className="lg:col-span-5 3xl:col-span-4 space-y-4">
           <div className="text-xs font-mono-code text-[#1868F2] dark:text-[#5B95F7] font-semibold">
             ENGINEERING PHILOSOPHY &amp; IIT TIRUPATI
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950 dark:text-[#F6F4ED]">
             Grounding software in physical engineering discipline.
           </h2>
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
+          <p className="text-sm sm:text-base 2xl:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
             Studying mechanical engineering at IIT Tirupati instills an uncompromising respect for physical laws: equilibrium, conservation, and failure limits. I bring that same structural rigor to software systems — prioritizing deterministic invariants, memory boundaries, and real utility over ephemeral demonstrations.
           </p>
           <div className="pt-2">
@@ -363,7 +363,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
 
-        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="lg:col-span-7 3xl:col-span-8 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-4">
           <div className="p-5 rounded-xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17]">
             <div className="text-xs font-mono-code text-[#D99B00] dark:text-[#F7B500] font-bold mb-1">
               01 · FIRST PRINCIPLES
@@ -437,8 +437,8 @@ export const HomePage: React.FC<HomePageProps> = ({
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {ARTICLES_DATA.slice(0, 2).map((article) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6">
+          {ARTICLES_DATA.slice(0, 4).map((article) => (
             <div
               key={article.id}
               onClick={() => onSelectArticle(article)}
@@ -470,16 +470,16 @@ export const HomePage: React.FC<HomePageProps> = ({
       {(() => {
         const featuredPitchDeck = DOCUMENTS_DATA.find((doc) => doc.id === 'doc-qraezev-pitch-deck') || DOCUMENTS_DATA[0];
         return (
-          <section className="p-8 sm:p-10 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xs">
-            <div className="space-y-3 max-w-2xl">
+          <section className="p-8 sm:p-10 2xl:p-14 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xs">
+            <div className="space-y-3 max-w-2xl 2xl:max-w-4xl 3xl:max-w-5xl">
               <div className="flex items-center gap-2 text-xs font-mono-code text-[#D99B00] dark:text-[#F7B500] font-semibold">
                 <FileText className="w-3.5 h-3.5" />
                 <span>FEATURED PITCH DECK · PRE-SEED DOCUMENTATION</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-950 dark:text-white">
+              <h3 className="text-xl sm:text-2xl 2xl:text-3xl font-bold tracking-tight text-neutral-950 dark:text-white">
                 {featuredPitchDeck.title}
               </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+              <p className="text-sm 2xl:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
                 {featuredPitchDeck.summary}
               </p>
               <div className="flex flex-wrap items-center gap-3 text-xs font-mono-code text-neutral-500">
@@ -513,11 +513,11 @@ export const HomePage: React.FC<HomePageProps> = ({
       })()}
 
       {/* 7. Contact Banner */}
-      <section className="text-center py-12 px-6 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] space-y-4">
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-950 dark:text-[#F6F4ED]">
+      <section className="text-center py-12 2xl:py-16 px-6 rounded-2xl border border-[#E5E2D6] dark:border-[#2C2D28] bg-white dark:bg-[#1A1B17] space-y-4">
+        <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-bold tracking-tight text-neutral-950 dark:text-[#F6F4ED]">
           Interested in collaborating or discussing systems?
         </h2>
-        <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 max-w-xl mx-auto leading-relaxed">
+        <p className="text-sm sm:text-base 2xl:text-lg text-neutral-600 dark:text-neutral-300 max-w-xl 2xl:max-w-2xl 3xl:max-w-3xl mx-auto leading-relaxed">
           Whether you are an investor, founder, engineering researcher, or prospective collaborator, I welcome substantive inquiries.
         </p>
         <div className="pt-2">

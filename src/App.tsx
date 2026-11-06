@@ -58,8 +58,8 @@ export default function App() {
         onOpenContact={handleOpenContact}
       />
 
-      {/* Main Viewport Container */}
-      <main className="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-10">
+      {/* Main Viewport Container - Automatically adapts across wide and ultra-wide screens */}
+      <main className="flex-1 w-full mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32 4xl:px-40">
         {activeTab === 'overview' && (
           <HomePage
             onSelectProject={setSelectedProject}
